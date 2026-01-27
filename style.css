@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.video-container {
+  position: relative;
+}
+
+video, canvas {
+  width: 640px;
+  height: 480px;
+  border: 1px solid #ccc;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#gesture-list {
+  margin-top: 10px;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.gesture-item {
+  font-weight: bold;
+}

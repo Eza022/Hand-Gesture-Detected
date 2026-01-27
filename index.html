@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediaPipe Hand Gesture Detection</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Hand Gesture Detection</h1>
+
+  <div class="container">
+    <div class="video-container">
+      <video id="video" autoplay playsinline></video>
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="controls">
+      <button id="snapshot-btn">Capture Snapshot</button>
+      <input type="file" id="upload-image" accept="image/*">
+      <div id="gesture-list"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
