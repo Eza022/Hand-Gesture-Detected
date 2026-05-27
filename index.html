@@ -3,24 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MediaPipe Hand Gesture Detection</title>
+  <title>Vision AI | Gesture Detection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <h1>Hand Gesture Detection</h1>
-
-  <div class="container">
-    <div class="video-container">
-      <video id="video" autoplay playsinline></video>
-      <canvas id="canvas"></canvas>
-    </div>
-
-    <div class="controls">
-      <button id="snapshot-btn">Capture Snapshot</button>
-      <input type="file" id="upload-image" accept="image/*">
-      <div id="gesture-list"></div>
-    </div>
+  <div class="background-elements">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
   </div>
+
+  <main class="app-container">
+    <header class="app-header">
+      <div class="logo">
+        <span class="icon">✨</span>
+        <h1>Vision AI</h1>
+      </div>
+      <p class="subtitle">Real-time Hand Gesture Detection</p>
+    </header>
+
+    <div class="content-wrapper">
+      <div class="vision-panel glass-panel">
+        <div class="video-container" id="video-container">
+          <video id="video" autoplay playsinline></video>
+          <canvas id="canvas"></canvas>
+          <div class="status-indicator">
+            <span class="pulse"></span> Live
+          </div>
+        </div>
+      </div>
+
+      <div class="controls-panel glass-panel">
+        <h2>Controls</h2>
+        <div class="actions">
+          <button id="snapshot-btn" class="primary-btn">
+            <span class="btn-icon">📸</span> Capture Snapshot
+          </button>
+          
+          <div class="file-upload-wrapper">
+            <input type="file" id="upload-image" accept="image/*" class="file-input">
+            <label for="upload-image" class="secondary-btn">
+              <span class="btn-icon">📁</span> Upload Image
+            </label>
+          </div>
+        </div>
+
+        <div class="results-section">
+          <h3>Detected Gestures</h3>
+          <div id="gesture-list" class="gesture-list">
+            <!-- Gestures will appear here -->
+            <div class="empty-state">No hands detected yet...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <script type="module" src="/main.js"></script>
 </body>
